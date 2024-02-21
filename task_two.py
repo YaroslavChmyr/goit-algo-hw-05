@@ -4,6 +4,11 @@ def binary_search(arr, x):
     mid = 0
     iterations = 0
 
+    if x < arr[0]:
+        return iterations, arr[0]
+    elif x > arr[-1]:
+        return iterations, arr[-1]
+
     while low <= high:
 
         mid = (high + low) // 2
@@ -26,8 +31,8 @@ def binary_search(arr, x):
 # Створюємо відсортований масив з дробовими числами та перевіряємо алгоритм на двох різних значеннях
 
 arr = [2.1, 3, 4.3, 10.5, 40.7]
-x = 10
-y = 2.5
+x = 42
+y = 0
 
 iterations, upper_bound = binary_search(arr, x)
 
